@@ -44,6 +44,10 @@ body {
   color: var(--main-font-color);
 }
 
+*:focus {
+  outline: none;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -132,6 +136,27 @@ body {
   color: var(--focus-color);
 }
 
+.mail:hover .mail-svg,
+.mail:focus .mail-svg {
+  fill: var(--focus-color);
+}
+
+.phone:hover .phone-svg,
+.phone:focus .phone-svg {
+  fill: var(--focus-color);
+}
+
+.mail-svg {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.phone-svg {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
 .nav-links {
   font-weight: 500;
   font-size: 14px;
@@ -181,6 +206,13 @@ body {
   background-color: var(--background-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-title {
@@ -228,6 +260,30 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.adv-svg-container {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.adv-svg-container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.adv-svg {
+  fill: #212121;
+  width: 70px;
+  height: 70px;
 }
 
 .advantages-title {
@@ -411,7 +467,8 @@ body {
   margin-left: auto;
 }
 
-.h-cont {
+.mail,
+.phone {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
